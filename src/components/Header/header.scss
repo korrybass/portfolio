@@ -1,0 +1,205 @@
+.header{
+  background-color: #f15326;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 8px 15px;
+  box-sizing: border-box;
+  color: gray;  
+  z-index: 999999;
+  align-items: center;
+  border-bottom: 3px solid #faf0cc;
+  li{
+    margin-left: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    a{
+      color: #F16333;
+      text-decoration: none;
+    }
+  }
+  .triangle-menu{
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 25px solid #c25034;
+    &:hover{
+      cursor: pointer !important;      
+    }
+  }
+  .hamburger {
+    z-index: 9;
+    padding: 5px;
+    .hamburger-inner{
+      background-color: #faf0cc;
+      &::before, &::after {
+        background-color: #faf0cc;
+      }
+    }
+    
+  }
+  .hamburger--spring.is-active .hamburger-inner {
+    background-color: transparent;
+    &::before, &::after {
+      background-color: #636363;
+    }
+  }
+
+  .nav-logo{
+    z-index: 9;
+    .square{
+      width: 32px;
+      height: 32px;
+      background-color: #faf0cc;
+      fill: transparent;
+      stroke: white;
+      stroke-width: 8;
+      transform: rotate(-180deg);      
+    }
+  }
+  #triangle-down {
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-top: 100px solid red;
+}
+.nav-container{
+  position: fixed;
+  // display: none;
+  top: 0;
+  left: 0;
+  margin: auto;
+  width: 100%;
+  visibility: hidden;
+  height: 100vh;
+  background-color: rgba(254, 255, 218, 0.8);
+
+  ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  li{
+    font-family: 'Raleway', serif;
+    text-transform: uppercase;
+    margin: 0 15px;
+    font-size: 45px;
+    justify-content: center;
+  }
+  &.is-showing{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #636363;
+    // visibility: visible;
+  }
+  
+}
+}
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    right: 0;
+    background-color: #c25034; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    cursor: pointer;              
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #ffab6b;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+  0% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+@keyframes zoomOut {
+  from {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    transform: scale3d(.3, .3, .3);
+  }
+
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.zoomOut {
+  animation-name: zoomOut;
+}
+
+.animated {
+  animation-duration: .5s;
+  animation-fill-mode: both;
+}
+
+.zoomIn {
+  animation-name: zoomIn;
+}

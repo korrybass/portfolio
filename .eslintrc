@@ -1,0 +1,21 @@
+{
+  "parser": "babel-eslint",
+  "plugins": [
+      "react",
+      "babel",
+      "promise"
+  ],
+  "extends": [
+      "airbnb",
+      "standard",
+      "standard-react"
+  ],
+  "env": {
+    "browser": true
+  },
+  "rules": {
+     "max-len" : [2, 120, 2],
+     "jsx-quotes": [2, "prefer-single"],
+     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+  }
+}

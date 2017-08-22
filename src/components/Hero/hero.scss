@@ -1,0 +1,82 @@
+.hero{
+  width: 100%;
+  min-height: 80vh;
+  background-color: #f15326;
+  .hero-content{
+    height: 68vh;
+    margin: 100px auto;
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    .intro{
+      color: white;
+      flex-direction: column;
+      justify-content: flex-end;
+      display: flex;
+      min-width: 275px;
+      .intro-content{
+        font-weight: normal;
+        font-size: 35px;
+        color: #faf0cc;
+        font-weight: normal;
+        padding: 15px;
+      }
+      h1{
+        text-transform: uppercase;        
+      }
+      h4{
+        margin: 0 0 8px 0;
+        // font-family: Lato;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+      }
+      h3{
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+        font-weight: 900;
+        margin: 0;
+        font-size: 28px;
+        letter-spacing: 1px;
+        line-height: 27px;
+      }
+    }
+  }
+  * {
+  box-sizing: border-box;
+
+  .letter{
+    border: none;
+    padding: 10px;
+    & > div{
+      border: 4px double #d4c7a4;
+      padding: 15px;
+      justify-content: center;
+      align-items: center;
+    }
+    p{
+      font-family: 'Raleway', serif;
+      border-left: 2px solid #faf0cc;
+      padding-left: 7.5px;
+      margin-left: 7.5px;
+      color: #faf0cc;
+      font-size: 14px;
+    }
+    .ph{
+      width: 45px;
+    }
+  }
+  .triangle{
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .hero-tag{
+    position: absolute;
+  }
+}
+}
+
+  .hero-parallax{
+    height: 70vh;
+    width: 100%;
+  }
